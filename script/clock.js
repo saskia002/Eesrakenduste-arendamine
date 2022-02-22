@@ -2,6 +2,10 @@
 let d = new Date();
 //console.log(d);
 
+//lisad sii keele valiku...
+
+
+
 //päevad
 let day = d.getDay();
 let days = ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev"];
@@ -15,7 +19,7 @@ document.getElementById('year').innerHTML = year;
 //kuud
 let month = d.getMonth();
 let months = ["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"];
-let monthConatiner = document.getElementById('month').innerHTML = months[month];
+let monthConatiner = document.getElementById('month').innerHTML = months[month] + '.';
 
 //kuupäev
 let date = d.getDate();
@@ -31,9 +35,9 @@ let minutesContainer = document.getElementById('minutes');
 let hoursContainer = document.getElementById('hours');
 
 ////seda asendab update blokk
-// secondsContainer.innerHTML = seconds;
-// minutesContainer.innerHTML = minutes + ':';
-// hoursContainer.innerHTML = hours+ ':';
+secondsContainer.innerHTML = seconds;
+minutesContainer.innerHTML = minutes + ':';
+hoursContainer.innerHTML = hours+ ':';
 
 //kella uuendamine siin selle fnc sees
 function updateClock(){
@@ -60,3 +64,22 @@ function updateClock(){
 
 //kella uuendamine iga teatud aja tagant, ehk teeb seda koguaeg
 window.setInterval(updateClock, 100);
+
+////
+
+//event listener button jaoks
+let fontSize = 13;
+
+//väiksemaks
+document.getElementById('smaller').addEventListener('click', function(){
+    fontSize --;
+    document.getElementById('container').style.fontSize = fontSize + 'px';
+})
+
+//suurmekas
+document.getElementById('bigger').addEventListener('click', function(){
+    fontSize ++;
+    document.getElementById('container').style.fontSize = fontSize + 'px';
+})
+
+//ctrl f5 teeb full refesh lehel!

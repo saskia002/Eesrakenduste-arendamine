@@ -7,10 +7,30 @@
     flex-direction: column;
     align-items: center;
     height: 70vh;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    font-size: 13px;
  }
 
  #time{
     display: flex;
     justify-content: center;
  }
+
+ #time div{
+    padding: 1px
+ }
+
+ #date-time{
+    display: flex;
+    flex-direction: row;
+ }
+
+#date-time div{
+    padding: 1px;
+}
+
+#day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
