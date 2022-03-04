@@ -1,16 +1,26 @@
+//keele valikud
+
+//EST
+let daysEST = ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev"];
+let monthsEST = ["jaanuar", "veebruar", "märts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"];
+
+//ENG
+
+let daysENG = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+let monthsENG = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+
+//RUS
+let daysRUS = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+let monthsRUS = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
+
 //date time meetod
 let d = new Date();
 //console.log(d);
 
-//lisad sii keele valiku...
-
-
-
 //päevad
 let day = d.getDay();
-let days = ["Pühapäev", "Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev"];
 let dayContainer = document.getElementById('day');
-dayContainer.innerHTML = days[day];
+// dayContainer.innerHTML = days[day];
 
 //aastad
 let year = d.getFullYear();
@@ -18,12 +28,31 @@ document.getElementById('year').innerHTML = year;
 
 //kuud
 let month = d.getMonth();
-let months = ["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"];
-let monthConatiner = document.getElementById('month').innerHTML = months[month] + '.';
+// let monthConatiner = document.getElementById('month').innerHTML = months[month];
 
 //kuupäev
 let date = d.getDate();
-document.getElementById('date').innerHTML = date + '.';
+document.getElementById('date').innerHTML = date;
+
+//Keele filter
+
+//lehel keele dropdown menu keele valik
+let lang = 0; //def lang panek
+setLang();
+
+function setLang(){
+    lang = document.getElementById("lang").value;
+    if (lang == 0) {
+        dayContainer.innerHTML = daysEST[day];
+        let monthConatiner = document.getElementById('month').innerHTML = monthsEST[month];
+    }else if (lang == 1) {
+        dayContainer.innerHTML = daysENG[day];
+        let monthConatiner = document.getElementById('month').innerHTML = monthsENG[month];
+    } else {
+        dayContainer.innerHTML = daysRUS[day];
+        let monthConatiner = document.getElementById('month').innerHTML = monthsRUS[month];
+    }
+}
 
 //kella aeg
 let hours = d.getHours();
@@ -36,8 +65,8 @@ let hoursContainer = document.getElementById('hours');
 
 ////seda asendab update blokk
 secondsContainer.innerHTML = seconds;
-minutesContainer.innerHTML = minutes + ':';
-hoursContainer.innerHTML = hours+ ':';
+minutesContainer.innerHTML = minutes;
+hoursContainer.innerHTML = hours;
 
 //kella uuendamine siin selle fnc sees
 function updateClock(){
@@ -58,28 +87,68 @@ function updateClock(){
     }
 
     secondsContainer.innerHTML = seconds;
-    minutesContainer.innerHTML = minutes + ':';
-    hoursContainer.innerHTML = hours+ ':';
+    minutesContainer.innerHTML = minutes;
+    hoursContainer.innerHTML = hours;
 }
 
 //kella uuendamine iga teatud aja tagant, ehk teeb seda koguaeg
 window.setInterval(updateClock, 100);
 
-////
+////zoom
+let fontSize = 22;
 
-//event listener button jaoks
-let fontSize = 13;
+//centre-box
+let withDef = 600;
+let HeightDef = 450;
+
+//line
+let lineDef = 4;
 
 //väiksemaks
 document.getElementById('smaller').addEventListener('click', function(){
     fontSize --;
-    document.getElementById('container').style.fontSize = fontSize + 'px';
+    withDef -= 25;
+    HeightDef -= 20;
+    lineDef -= 0.2;
+    document.getElementById('centre-box').style.fontSize = fontSize + 'px';
+    document.getElementById('centre-box').style.width = withDef + 'px';
+    document.getElementById('centre-box').style.height = HeightDef + 'px';
+    document.getElementById('line').style.border = lineDef + 'px solid black';
 })
 
-//suurmekas
+//suuremaks
 document.getElementById('bigger').addEventListener('click', function(){
     fontSize ++;
-    document.getElementById('container').style.fontSize = fontSize + 'px';
+    withDef += 25;
+    HeightDef += 20;
+    lineDef += 0.2;
+    document.getElementById('centre-box').style.fontSize = fontSize + 'px';
+    document.getElementById('centre-box').style.width = withDef + 'px';
+    document.getElementById('centre-box').style.height = HeightDef + 'px';
+    document.getElementById('line').style.border = lineDef + 'px solid black';
 })
 
-//ctrl f5 teeb full refesh lehel!
+document.getElementById('deafult').addEventListener('click', function () {
+    fontSize = 22;
+    withDef = 600;
+    HeightDef = 450;
+    lineDef = 4;
+    document.getElementById('centre-box').style.fontSize = fontSize + 'px';
+    document.getElementById('centre-box').style.width = withDef + 'px';
+    document.getElementById('centre-box').style.height = HeightDef + 'px';
+    document.getElementById('line').style.border = lineDef + 'px solid black';
+})
+
+//theme muutmine
+let theme = 0;
+
+function setTheme() {
+    theme = document.getElementById("theme").value;
+
+    if (theme == 0) {
+        document.getElementsByTagName("head")[0].insertAdjacentHTML("beforeend", "<link rel=\"stylesheet\" href=\"style/style.css\" />");
+
+    } else if (theme == 1) {
+        document.getElementsByTagName("head")[0].insertAdjacentHTML("beforeend", "<link rel=\"stylesheet\" href=\"style/style_light.css\" />");
+    }
+}
