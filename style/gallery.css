@@ -1,0 +1,80 @@
+html, body{
+    height: fit-content;
+    width: fit-content;
+    
+
+}
+
+#teamList{
+    overflow: hidden;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    margin: 0;
+    max-width: max-content;
+    padding: 0;
+    background-color:  white !important;
+}
+
+#teamList > .video{
+    /* display: grid; */
+    
+    /* Need 2 teevad täpselt sama asja */
+    /* align-items: center;
+    justify-items: center; */
+    /* place-items: center; */
+    /* ... */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#teamList button{
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 4px;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    border-color: black;
+    cursor: pointer;
+}
+
+#teamList button:hover{
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+#prevButton{
+    position: fixed;
+    top: 50%;
+    left: 1%;
+}
+
+#exitButton{
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#nextButton{
+    position: fixed;
+    top: 50%;
+    right: 1%;
+}

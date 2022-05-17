@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script/gallery.js" defer></script>
+    <link rel="stylesheet" href="style/gallery.css">
+    <title>Gallery</title>
+
+    <!-- <style>
+        img{
+            width: 200px;
+        }
+    </style> -->
+
+</head>
+<body>
+    <div id="buttonContainer">
+        <button id="prev">Eelmine</button>
+        <button id="next">Järgmine</button>
+        <button id="enterFullscreen">Täisekraan</button>
+    </div>
+
+    <div id="picContainer">
+        <img src="images/ebic_memes/pilt1.jpg" alt="Pilt1" class="active"> <!-- data-img="" -->
+        <img src="images/ebic_memes/pilt2.jpg" alt="Pilt2">
+        <img src="images/ebic_memes/pilt3.jpg" alt="Pilt3">
+        <img src="images/ebic_memes/pilt4.jpg" alt="Pilt4">
+        <img src="images/ebic_memes/pilt5.jpg" alt="Pilt5">
+        <img src="images/ebic_memes/pilt6.jpg" alt="Pilt6">
+        <img src="images/ebic_memes/pilt7.jpg" alt="Pilt7">
+        <img src="images/ebic_memes/pilt8.jpg" alt="Pilt8">
+        <img src="images/ebic_memes/pilt9.jpg" alt="Pilt9">
+    </div>
+
+    <!-- Pildi suurelt näitamine -->
+    <div class="big-img-containter">
+        <div class="big-img">
+            Siia tuleb suur pilt.
+        </div>
+    </div>
+
+    <div id="fullscreen">
+        <div id="prevButton">
+            <button id="prevPic"><</button>
+        </div>
+        <div id="exitButton">
+            <button id="exitFullscreen">X</button>
+        </div>
+        <div id="nextButton">
+            <button id="nextPic">></button>
+        </div>
+        <div class="big-img">
+            Siia tuleb suur pilt.
+        </div>
+    </div>
+
+</body>
+</html
