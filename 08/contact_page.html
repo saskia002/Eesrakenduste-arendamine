@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="scripts/contact.js" defer></script>
+	<link rel="stylesheet" href="style/index.css">
+    <title>Kontaktileht</title>
+</head>
+<body>
+	
+	<nav>
+		<div id="nav-container" >
+			<div id="nav-buttons">
+				<ul>
+					<li>
+						<a href="index.html">Avaleht</a>					
+					</li>
+		 			<li>
+						<a href="team_page.html">Tiimileht</a>
+					</li>
+				</ul>
+			</div>
+		</div>			
+	</nav>	
+	
+    <div id="wrapper" style="margin: 0% 6%;">
+		<div id="content">
+			<h3>Kontaktivorm</h3>
+			<p>Võid proovida ühendust võtta, aga ei lähe läbi!</p>
+			<div id="input-wrapper">
+				<label for="name">Nimi: </label>
+				<input type="text" name="name" id="name" placeholder="Eesnimi Perekonnanimi" required>
+				<div id="nameError"></div>
+				<br>
+				<label for="mobile">Telefon: </label>
+				<input type="tel" name="mobile" id="mobile" placeholder="+37212345678" required>
+				<div id="mobileError"></div>
+				<br>
+				<label for="email">E-post: </label>
+				<input type="email" name="email" id="email" placeholder="email@haldur.com" required>
+				<div id="emailError"></div>
+				<br>
+				<label for="additional-info">Lisainfo: </label>
+				<textarea name="additional-info" id="additional-info" cols="30" rows="10" placeholder="..." required></textarea>
+				<div id="addInfoError"></div>
+				<br>
+				<input type="button" value="Saada!" id="submit">
+			</div>
+			<br>
+			<div id="amogus" style="display: flex; width: 100%;">
+				<div id="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d320.3376500953809!2d27.434495228176488!3d59.34936572456163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469465396ac4e049%3A0x783e81a19b1fceaa!2sViru%20jalav%C3%A4epataljon!5e0!3m2!1set!2see!4v1649345495120!5m2!1set!2see" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<br>
+				<div id="contact">
+					<h3>Võta meiega ühendust!</h3>
+					<p>Telefoninumber: 112</p>
+					<p>Aadress: <a href="https://www.tlu.ee/">Narva mnt 25, 10120 Tallinn</a></p>
+					<p>E-post: lambad@klassis.ee</p>
+				</div>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

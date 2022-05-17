@@ -1,0 +1,110 @@
+.wrapper { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.teamList{
+    overflow: hidden;
+    display: initial;
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    margin: 0;
+    max-width: max-content;
+    padding: 0;
+    background-color:  white !important;
+}
+
+.teamList > .video{
+    /* display: grid; */
+    
+    /* Need 2 teevad täpselt sama asja */
+    /* align-items: center;
+    justify-items: center; */
+    /* place-items: center; */
+    /* ... */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.teamList button{
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 4px;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    border-color: white;
+    cursor: pointer;
+}
+
+.teamList button:hover{
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+#prevButton{
+    position: fixed;
+    top: 50%;
+    left: 1%;
+}
+
+#exitButton{
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#nextButton{
+    position: fixed;
+    top: 50%;
+    right: 1%;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="typer.js" defer></script>
+    <title>Typer</title>
+</head>
+<body>
+    <div id="name">
+        <label for="nameValue">Palun, sisesta oma nimi</label>
+        <input type="text" id="nameValue">
+        <label for="startingWordLength">Esimese sõna pikkus</label>
+        <input type="number" id="startingWordLength" max="31" value="3">
+        <label for="wordsInGame">Sõnu mängus</label>
+        <input type="number" id="wordsInGame" max="31" value = "5">
+        <div id="error">Esimese sõna pikkus ja sõnu mängus summa ei saa ületa 31-te. </div>
+        <input type="button" value="Mängi" id="submitName">
+    </div>
+    <div id="info">Mängu info</div>
+    <div id="container">
+        <div id="wordDiv">Siia kuvame sõna</div>
+        <div id="score">Konkreetse mängu tulemus</div>
+        <div id="startNew">Mängu uuesti alustamiseks vajata nupule "R".</div>
+    </div>
+
+    <div id="results">Tulemused</div>
+    <div id="filter">
+        <label for="byCharsInMinute">Sorteeri tulemused tähemärke minutis järgi:</label>
+        <input type="checkbox" name="byCharsInMinute" id="byCharsInMinute">
+    </div>
+</body>
+</html>

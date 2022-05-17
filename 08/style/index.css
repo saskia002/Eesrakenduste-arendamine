@@ -1,0 +1,233 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.error{
+	color: red;
+}
+
+button, a, input{
+	cursor: pointer;
+}
+
+p{
+	font-size: 20px;
+	line-height: 150%;
+}
+
+h3{
+	font-size: 1.35rem;
+	margin-bottom: 0;
+}
+
+label{
+	font-size: 1.1rem;
+}
+
+input{
+	display: flex;
+	width: 12rem;
+	align-self: flex-end;
+}
+
+textarea{
+	display: flex;
+	width: 16rem;
+	height: 6rem;
+	align-self: flex-end;	
+	resize: none;
+}
+
+#input-wrapper-1{
+	display: inline;
+	width: max-content !important;
+}
+
+#submit{
+	width: max-content;
+}
+
+nav{
+	display: flex;
+	justify-content: center;
+	color: white;
+	background-color: #2D333B;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 3rem;
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.1rem;
+	letter-spacing: 0.035rem;
+}
+
+#nav-container{
+	display: flex;
+	width: 80%;
+	align-items: center;
+	justify-content: center;
+}
+
+#nav-buttons{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+#nav-buttons ul, #nav-buttons li{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	width: max-content;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#nav-buttons a{
+	padding: 0.2rem 0.5rem;
+	margin: 0rem 0.2rem;
+}
+
+
+nav a:hover{
+	background-color: white;
+	color: darkslategray;
+}
+
+nav h1{
+	margin: 0;
+	padding: 0;
+}
+
+#content{
+	width: 1200px;
+	height: 100%;
+	display: grid;
+	place-content: center;
+	padding-bottom: 6%;
+}
+
+footer{
+	background-color: #2D333B;
+	color: white;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 10px;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	bottom: 0;
+	height: min-content;
+	font-weight: 100;
+}
+
+footer h3{
+	margin: 0 !important;
+	font-size: 1rem;
+	padding: 6px 0px;
+}
+
+footer a{
+	color: white;
+	padding: 1px 6px;
+}
+
+br{
+	content: "" !important;
+    display: block !important;
+    margin-bottom: 0.35rem !important;
+}
+
+.wrapper { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 6s ease infinite;
+-z-animation: rainbow 6s ease infinite;
+-o-animation: rainbow 6s ease infinite;
+  animation: rainbow 6s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.teamList{
+
+	display: flex;
+	flex-direction: column;
+	
+
+}
+
+button{
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 4px;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    border-color: white;
+    cursor: pointer;
+	margin: 0rem 1rem;
+}
+
+button:hover{
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+figure{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-items: center;
+	margin: 0;
+}
+
+figcaption, #teamPerson{
+	margin-left: 4.8rem;
+}
+
+figcaption{
+	margin-top: 0.3rem;
+}
